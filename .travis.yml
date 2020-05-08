@@ -37,7 +37,7 @@ deploy:
       bucket: a2student14-springboot-webservice   # S3 버킷
       region: eu-west-1                           # S3 버킷 리전
       skip_cleanup: true
-      acl: private
+      acl: private 
       local_dir: deploy
       wait-until-deployed: true
       
