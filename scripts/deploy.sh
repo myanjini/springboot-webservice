@@ -1,10 +1,10 @@
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/app/step2
-
+ 
 echo "> $REPOSITORY 디렉터리로 이동"
 cd $REPOSITORY
-
+ 
 echo "> 배포 파일 복사"
 cp $REPOSITORY/zip/*.war $REPOSITORY/
 
