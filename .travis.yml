@@ -13,7 +13,7 @@ before_install:
     - chmod +x ./gradlew 
 script: "./gradlew clean build"
 
-
+ 
 before_deploy:
     #- zip -r springboot-webservice *
     #- mkdir -p deploy
