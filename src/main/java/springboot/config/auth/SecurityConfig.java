@@ -16,6 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	// 가입, 정보 수정, 세션에 저장하는 등의 기능을 제공
 	private final CustomOAuth2UserService customOAuth2UserService;
 	
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
@@ -26,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				// URL별로 권한 관리를 지정
 				.authorizeRequests()
 				// 권한 관리 대상을 지정
-				.antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
+				.antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
 				.antMatchers("/api/v1/**").hasRole(Role.USER.name())
 				// 설정된 값을 제외한 나머지에 대해서는 인증 받은 사용자만 허용
 				.anyRequest().authenticated()
